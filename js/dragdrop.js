@@ -1,11 +1,11 @@
-let bankLi = document.querySelectorAll('.multipleChoiceOptions ol li');
+let bankLi = document.querySelectorAll('.multipleChoiceOptions ul li');
 
 for (li of bankLi) {
   li.addEventListener('drop', drop);
   li.addEventListener('dragover', allowDrop);
 }
 
-let choices = document.querySelectorAll('.multipleChoiceOptions ol li p');
+let choices = document.querySelectorAll('.multipleChoiceOptions ul li p');
 for (p of choices) {
   p.setAttribute('draggable', true);
   p.addEventListener('dragstart', drag);

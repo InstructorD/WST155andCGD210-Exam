@@ -1,9 +1,13 @@
+@import 'variables';
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-size: 1.5em;
+  font-size: 1.4em;
+  background-color: $backgroundDark;
+  color: $textLight;
 }
 .yourname {
   width: 200px;
@@ -28,20 +32,30 @@ body {
   border: 2px solid;
   ol {
     columns: 2;
+    padding: 30px;
     list-style-type: lower-alpha;
   }
 }
-
+.cssPropery {
+  color: $textCSSProperty;
+}
+.cssSelector {
+  color: $textCSSSelector;
+}
+.cssValue {
+  color: $textCSSValue;
+}
 input {
   border: none;
-  border-bottom: 1px solid;
+  border-radius: 5px;
+  color: $textInput;
   outline: none;
   text-align: center;
   width: 160px;
-  background-color: transparent;
+  background: #fff;
   font-family: 'Oswald', sans-serif;
-  font-weight: bold;
   font-size: 1em;
+  margin: 3px;
 }
 
 section {
@@ -55,7 +69,6 @@ main {
   border: 4px solid;
   form {
     .fillinblank {
-      background-color: rgb(246, 180, 235);
       ol {
         padding-left: 20px;
         li {
@@ -65,23 +78,25 @@ main {
     }
   }
   .multipleChoice {
-    background-color: rgb(169, 163, 230);
     .multipleChoiceOptions {
-      max-width: 300px;
+      max-width: 400px;
       padding-left: 20px;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     }
     .multipleChoiceQuestions {
       padding-left: 20px;
       li {
         padding: 10px;
-        input {
-          width: 260px;
+        div {
+          width: 150px;
         }
       }
     }
   }
   .questions {
-    background-color: rgb(139, 206, 136);
     div {
       padding-left: 20px;
       textarea {
